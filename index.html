@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LibasHub | Fashion • Watches • Accessories</title>
+<meta name="description" content="LibasHub — Pakistan's trendiest online store for clothing, smartwatches and accessories. COD, EasyPaisa & JazzCash accepted.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SALE BANNER -->
+<div class="sale-banner" id="saleBanner">
+  <div class="sale-banner-inner">
+    🔥 <strong>EID SALE</strong> — UP TO 50% OFF! &nbsp;|&nbsp; 🚚 Free Delivery Over Rs 2000 &nbsp;|&nbsp; ⏰ Ends in <span id="bannerCountdown">00:00:00</span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="nav-logo">
+      <span class="kc">L<span>H</span></span>
+      <span class="sub">LIBASHUB</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#products">SHOP</a></li>
+      <li><a href="#reviews">REVIEWS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#products" class="nav-cta">SHOP NOW</a>
+      <button class="nav-cart" onclick="toggleCart()" aria-label="Open cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" onclick="toggleMobileMenu()" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </button>
+  <a href="#hero" onclick="toggleMobileMenu()">HOME</a>
+  <a href="#about" onclick="toggleMobileMenu()">ABOUT</a>
+  <a href="#products" onclick="toggleMobileMenu()">SHOP</a>
+  <a href="#reviews" onclick="toggleMobileMenu()">REVIEWS</a>
+  <a href="#contact" onclick="toggleMobileMenu()">CONTACT</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <!-- Background Slideshow -->
+  <div class="hero-slideshow">
+    <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1600&auto=format&fit=crop')"></div>
+  </div>
+  
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+  
+  <!-- Floating Particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      NEW COLLECTION 2026
+    </div>
+    
+    <h1 class="hero-title">
+      <span class="line"><span>WEAR</span></span>
+      <span class="line"><span>YOUR</span></span>
+      <span class="line"><span class="gradient-text">STYLE.</span></span>
+    </h1>
+    
+    <p class="hero-sub">CLOTHING • WATCHES • ACCESSORIES</p>
+    
+    <p class="hero-desc">
+      Pakistan's trendiest fashion store. Latest clothing for men, women & kids — plus premium smartwatches and accessories. Delivered to your doorstep.
+    </p>
+    
+    <div class="hero-buttons">
+      <a href="#products" class="btn btn-primary btn-glow">
+        SHOP NOW <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#categories" class="btn btn-outline">
+        <i class="fas fa-play"></i> VIEW COLLECTION
+      </a>
+    </div>
+    
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+      <div class="trust-badge">
+        <i class="fas fa-truck"></i>
+        <span>Free Delivery</span>
+      </div>
+      <div class="trust-badge">
+        <i class="fas fa-certificate"></i>
+        <span>100% Original</span>
+      </div>
+      <div class="trust-badge">
+        <i class="fas fa-undo"></i>
+        <span>7-Day Return</span>
+      </div>
+      <div class="trust-badge">
+        <i class="fas fa-money-bill-wave"></i>
+        <span>Cash on Delivery</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Stats -->
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="stat-icon">⭐</div>
+      <div class="stat-info">
+        <div class="stat-value" data-target="4.9">0</div>
+        <div class="stat-label">Customer Rating</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">📦</div>
+      <div class="stat-info">
+        <div class="stat-value" data-target="5000">0</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">👕</div>
+      <div class="stat-info">
+        <div class="stat-value" data-target="500">0</div>
+        <div class="stat-label">Products</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-label">01 / SHOP</div>
+    <h2 class="section-title">OUR COLLECTION.<br><span class="gold">YOUR STYLE.</span></h2>
+    <div class="products-filter" id="filterBar">
+      <button class="filter-btn active" onclick="filterProducts('all', this)">ALL</button>
+      <button class="filter-btn" onclick="filterProducts('clothing', this)">CLOTHING</button>
+      <button class="filter-btn" onclick="filterProducts('watches', this)">WATCHES</button>
+      <button class="filter-btn" onclick="filterProducts('accessories', this)">ACCESSORIES</button>
+      <button class="filter-btn" onclick="filterProducts('footwear', this)">FOOTWEAR</button>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-label">02 / ABOUT</div>
+    <h2 class="section-title">FASHION THAT SPEAKS.<br><span class="gold">QUALITY THAT LASTS.</span></h2>
+    <div class="about-grid">
+      <div class="about-image">
+        <img 
+          src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop" 
+          srcset="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop 600w, https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop 1200w"
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          alt="Store" 
+          width="1200"
+          height="1600"
+          loading="lazy">
+      </div>
+      <div class="about-content">
+        <p>LibasHub is Pakistan's trendiest online fashion store. We bring you the latest clothing for men, women and kids, along with premium smartwatches and stylish accessories — all at prices that make sense. Quality checked, carefully packed, delivered to your doorstep.</p>
+        <div class="feature-item"><span class="num">01</span><span class="name">MEN'S & WOMEN'S WEAR</span></div>
+        <div class="feature-item"><span class="num">02</span><span class="name">SMARTWATCHES & WEARABLES</span></div>
+        <div class="feature-item"><span class="num">03</span><span class="name">BAGS & ACCESSORIES</span></div>
+        <div class="feature-item"><span class="num">04</span><span class="name">FOOTWEAR & SNEAKERS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach">
+  <div class="container">
+    <div class="section-label">03 / WHY US</div>
+    <h2 class="section-title">SHOPPING MADE<br><span class="gold">SIMPLE.</span></h2>
+    <div class="approach-grid">
+      <div class="approach-item"><div class="num">01</div><div class="name">QUALITY</div><div class="desc">Every item checked before shipping. 100% original products.</div></div>
+      <div class="approach-item"><div class="num">02</div><div class="name">FAST DELIVERY</div><div class="desc">Nationwide delivery in 2-4 working days.</div></div>
+      <div class="approach-item"><div class="num">03</div><div class="name">EASY PAYMENTS</div><div class="desc">COD, EasyPaisa and JazzCash accepted.</div></div>
+      <div class="approach-item"><div class="num">04</div><div class="name">EASY RETURNS</div><div class="desc">7-day return policy on all products.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-label">04 / REVIEWS</div>
+    <h2 class="section-title">WHAT OUR<br><span class="gold">CUSTOMERS SAY.</span></h2>
+    <div class="reviews-grid">
+      <article class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Amazing quality! The shirt I ordered fits perfectly and the fabric is premium. Delivery was super fast. Highly recommended!"</p>
+        <div class="review-author">— Ahmed R.</div>
+      </article>
+      <article class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Ordered a smartwatch and it exceeded my expectations. The packaging was neat and delivery was quick. Will shop again!"</p>
+        <div class="review-author">— Fatima K.</div>
+      </article>
+      <article class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Best online store in Pakistan. Prices are reasonable, products are original, and customer service is excellent."</p>
+        <div class="review-author">— Hassan M.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-label">05 / CONTACT</div>
+    <h2 class="section-title">GET IN TOUCH.<br><span class="gold">WE'RE HERE.</span></h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>LIBASHUB</h3>
+        <p>Gulshan-e-Iqbal,<br>Karachi, 75300,<br>Pakistan</p>
+        <a href="tel:+923198301854" class="phone">0319 8301854</a>
+        <p style="margin-top:1rem;font-size:0.85rem;color:var(--muted);">
+          WhatsApp: <a href="https://wa.me/923198301854" target="_blank" style="color:var(--gold);">0319 8301854</a><br>
+          Email: info@libashub.com
+        </p>
+      </div>
+      <form class="contact-form" onsubmit="submitContact(event)">
+        <div class="form-group"><label>FULL NAME</label><input type="text" required placeholder="Your full name"></div>
+        <div class="form-group"><label>PHONE</label><input type="tel" required placeholder="0319 8301854"></div>
+        <div class="form-group"><label>MESSAGE</label><textarea required placeholder="Tell us what you're looking for..."></textarea></div>
+        <button type="submit" class="btn btn-primary">SEND MESSAGE <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="kc">L<span>H</span></div>
+        <div class="tagline">FASHION • WATCHES • ACCESSORIES</div>
+      </div>
+      <div class="footer-col">
+        <h4>NAVIGATE</h4>
+        <ul>
+          <li><a href="#hero">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#products">SHOP</a></li>
+          <li><a href="#reviews">REVIEWS</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a href="tel:+923198301854">0319 8301854</a></li>
+          <li><a href="https://wa.me/923198301854" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:info@libashub.com">info@libashub.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>PAYMENTS</h4>
+        <ul>
+          <li>Cash on Delivery</li>
+          <li>EasyPaisa</li>
+          <li>JazzCash</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LibasHub. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/923198301854?text=Hi%20LibasHub!%20Mujhe%20kuch%20order%20karna%20hai." 
+   target="_blank" 
+   class="whatsapp-float" 
+   aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="whatsapp-tooltip">Chat with us</span>
+</a>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Subtotal</span><span>Rs <strong id="cartSubtotal">0</strong></span></div>
+    <div class="cart-total-row cart-grand"><span>Total</span><span>Rs <strong id="cartTotal">0</strong></span></div>
+    <button class="btn btn-primary cart-checkout-btn" onclick="openCheckout()">PROCEED TO CHECKOUT <i class="fas fa-arrow-right"></i></button>
+    <button class="cart-continue" onclick="toggleCart()">Continue Shopping</button>
+  </div>
+</aside>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Checkout</h2>
+      <button class="modal-close" onclick="closeCheckout()"><i class="fas fa-times"></i></button>
+    </div>
+    <form id="checkoutForm" onsubmit="placeOrder(event)">
+      <div class="checkout-section">
+        <h3>Customer Details</h3>
+        <div class="form-group"><label>FULL NAME</label><input type="text" id="custName" required placeholder="Your full name"></div>
+        <div class="form-group"><label>PHONE</label><input type="tel" id="custPhone" required placeholder="0319 8301854"></div>
+        <div class="form-group"><label>ADDRESS</label><textarea id="custAddress" required placeholder="House, Street, Area, City"></textarea></div>
+      </div>
+      <div class="checkout-section">
+        <h3>Payment Method</h3>
+        <div class="payment-options" id="paymentOptions">
+          <label class="payment-option selected">
+            <input type="radio" name="payment" value="COD" checked>
+            <div class="payment-content">
+              <span class="payment-icon">💵</span>
+              <div><strong>Cash on Delivery</strong><small>Pay when your order arrives</small></div>
+            </div>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="EasyPaisa">
+            <div class="payment-content">
+              <span class="payment-icon">📱</span>
+              <div><strong>EasyPaisa</strong><small>Send to 0319 8301854</small></div>
+            </div>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="JazzCash">
+            <div class="payment-content">
+              <span class="payment-icon">📲</span>
+              <div><strong>JazzCash</strong><small>Send to 0339 0067091</small></div>
+            </div>
+          </label>
+        </div>
+        <div class="payment-info" id="paymentInfo"></div>
+      </div>
+      <div class="checkout-summary">
+        <div class="summary-row"><span>Items</span><span id="checkoutItems">0</span></div>
+        <div class="summary-row summary-total"><span>Total</span><span>Rs <strong id="checkoutTotal">0</strong></span></div>
+      </div>
+      <button type="submit" class="btn btn-primary place-order-btn"><i class="fas fa-check"></i> PLACE ORDER</button>
+    </form>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal success-modal">
+    <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+    <h2>Order Placed!</h2>
+    <p id="successMessage"></p>
+    <div class="order-id-box">Order ID: <strong id="orderId">—</strong></div>
+    <button class="btn btn-primary" onclick="closeSuccess()">CONTINUE SHOPPING</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
